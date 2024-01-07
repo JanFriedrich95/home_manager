@@ -9,10 +9,18 @@
 
   home.packages = with pkgs; [
     vscode
+    wl-clipboard
+    neofetch
+    fastfetch
   ];
 
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
   };
+
+  imports = [
+	./fish
+	./nvim
+];
 }
